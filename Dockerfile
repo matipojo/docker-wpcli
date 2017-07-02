@@ -10,4 +10,9 @@ RUN curl -o /bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-
 COPY wp-su.sh /bin/wp
 RUN chmod +x /bin/wp-cli.phar
 
+# Install Elementor
 RUN wp plugin install elementor --activate
+
+# Install Git
+RUN apt-get install -y git --fix-missing
+
