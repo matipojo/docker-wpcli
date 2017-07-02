@@ -16,3 +16,7 @@ RUN wp plugin install elementor --activate
 # Install Git
 RUN apt-get install -y git --fix-missing
 
+# Install PHPENV
+RUN cd ~ \ 
+  && git clone git://github.com/phpenv/phpenv.git .phpenv \
+  && export PATH="$HOME/.phpenv/bin:$PATH"
